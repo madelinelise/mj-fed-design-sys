@@ -1,0 +1,20 @@
+.person-card {
+  border: 10px solid pink;
+  background-color: $color-lgray;
+  display: flex;
+  padding: 10px;
+}
+
+.person-card__info {
+  padding: 30px;
+}
+
+// .person-card__name {
+//   @include font-size-heading3;
+// }
+
+.person-card__image {
+  img {
+    border-radius: 50%;
+  }
+}
