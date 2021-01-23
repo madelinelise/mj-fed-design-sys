@@ -4,7 +4,53 @@ body {
   color: $color-charcoal;
 }
 
+.layout {
+  @include max-width;
+  padding: 60px 0;
+}
+
 p {
   line-height: 30px;
   margin-bottom: 60px;
+}
+
+h2, h3, h4, h5, h6 {
+  @include font-open-sans;
+}
+
+h1 {
+  @include font-montserrat-bold;
+  font-size: 2.5rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 1.5rem;
+  }
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 1.6rem;
+  }
+
+  @include breakpoint($bp-md) {
+    font-size: 2rem;
+  }
 }
