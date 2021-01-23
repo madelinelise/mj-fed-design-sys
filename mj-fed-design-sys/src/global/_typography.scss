@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+@mixin font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-open-sans-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+// Type
+//
+// Using Google Fonts.
+
+$font-primary: Raleway, sans-serif;
+$font-secondary: Merriweather, serif;
+$font-secondary-bold: MerriweatherBold, serif;
+
+@mixin font-primary {
+  font-family: $font-primary;
+}
+
+@mixin font-secondary {
+  font-family: $font-secondary;
+}
+
+@mixin font-secondary-bold {
+  font-family: $font-secondary-bold;
+}
+
+// Font weight vars.
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+
+// Global styles for headings.
+// Font size setup to be 10px = 1rem.
+@mixin font-size-heading1 {
+  font-size: 3.6rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 5.5rem;
+  }
+
+  @include breakpoint($bp-md) {
+    font-size: 6.8rem;
+  }
+}
+
+@mixin font-size-heading2 {
+  font-size: 2.8rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 3.6rem;
+  }
+
+  @include breakpoint($bp-md) {
+    font-size: 4.2rem;
+  }
+}
+
+@mixin font-size-heading3 {
+  font-size: 2rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 2.2rem;
+  }
+
+  @include breakpoint($bp-xsm) {
+    font-size: 2.6rem;
+  }
+}
+
+@mixin font-size-heading4 {
+  font-size: 1.6rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 1.6rem;
+  }
+
+  @include breakpoint($bp-md) {
+    font-size: 2rem;
+  }
+}
+// CHEEZ-76 ends at h4.
+@mixin font-size-heading5 {
+  font-size: 1rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin font-size-heading6 {
+  font-size: 1rem;
+
+  @include breakpoint($bp-xsm) {
+    font-size: 1rem;
+  }
+}
+
+:export {
+  fontFamilies: {
+    primary: $font-primary;
+    secondary: $font-secondary;
+    secondary-bold: $font-secondary-bold;
+  }
+}

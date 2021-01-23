@@ -1,0 +1,10 @@
+body {
+  @include font-open-sans;
+  background-color: $color-secondary;
+  color: $color-charcoal;
+}
+
+p {
+  line-height: 30px;
+  margin-bottom: 60px;
+}
