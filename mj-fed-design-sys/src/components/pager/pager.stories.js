@@ -1,13 +1,11 @@
 import React from "react";
-import { Pager } from "./pager";
+import Pager from "./pager";
 
 export default {
   title: "Components/Pager",
-  component: Pager,
+  component: "Pager",
 };
 
-const Template = (args) => (
-  <Pager />
-);
+const Template = () => <Pager />;
 
 export const PagerStory = Template.bind({});

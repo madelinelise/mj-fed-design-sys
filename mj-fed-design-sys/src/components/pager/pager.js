@@ -1,64 +1,47 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Pagination from "react-js-pagination";
 import "./pager.scss";
 
-export const Pager = (props) => {
-  const { name, title, image } = props;
+export default class Pager extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activePage: 15,
+    };
+  }
 
-  const [currentPage, setCurrentPage] = React.useState(4);
-  let maxPages = 10;
-  let items = [];
-  let leftSide = currentPage - 2;
-  if (leftSide <= 0) leftSide = 1;
-  let rightSide = currentPage + 2;
-  if (rightSide > maxPages) rightSide = maxPages;
-  for (let number = leftSide; number <= rightSide; number++) {
-    items.push(
-      <div
-        key={number}
-        className={
-          number === currentPage ? "round-effect active" : "round-effect"
-        }
-        onClick={() => {
-          setCurrentPage(number);
-        }}
-      >
-        {number}
+  handlePageChange(pageNumber) {
+    console.log(`active page is ${pageNumber}`);
+    this.setState({ activePage: pageNumber });
+  }
+
+  render() {
+    return (
+      <div>
+        <Pagination
+          activePage={this.state.activePage}
+          itemsCountPerPage={10}
+          totalItemsCount={450}
+          pageRangeDisplayed={5}
+          onChange={this.handlePageChange.bind(this)}
+          itemClass="pagination__item"
+        />
       </div>
     );
   }
-  const nextPage = () => {
-    if (currentPage < maxPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
+}
 
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
+// import React, { useState } from 'react';
+// import PropTypes from "prop-types";
+// import "./pager.scss";
+// import Pagination from 'rc-pagination';
 
-  return (
-    <div className="flex-container">
-      <div> currentPage : {currentPage} </div>
+// export const Pager = (props) => {
 
-      <div className="paginate-ctn">
-        <div className="round-effect" onClick={prevPage}>
-          {" "}
-          &lsaquo;{" "}
-        </div>
-        {items}
-        <div className="round-effect" onClick={nextPage}>
-          {" "}
-          &rsaquo;{" "}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Pager.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   title: 'PropTypes.string'
+//   return (
+//     <>
+//      <span>herrrdfkjsadklfj;sdlfjsdalk</span>
+//      <Pagination/>
+//      </>
+//   );
 // };
