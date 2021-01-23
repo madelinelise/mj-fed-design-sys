@@ -7,10 +7,12 @@ export const PersonCard = (props) => {
   return (
     <div className="person-card">
       <div className="person-card__image">
-      <img src={`${image}`} alt="Madeline Jensen"/>
+        <img src={`${image}`} alt="Madeline Jensen" />
       </div>
-      <div className="person-card__name">{name}</div>
-      <div className="person-card__title">{title}</div>
+      <div className="person-card__info">
+        <h3 className="person-card__name">{name}</h3>
+        <div className="person-card__title">{title}</div>
+      </div>
     </div>
   );
 };
