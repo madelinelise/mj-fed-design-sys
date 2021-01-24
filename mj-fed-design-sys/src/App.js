@@ -29,6 +29,8 @@ function App() {
     setPage(num);
   };
 
+  // console.log(users);
+
   return (
     <div className="layout">
       <Heading title="Our awesome team" headingLevel="h1" />
