@@ -1,19 +1,27 @@
-import React from 'react'
+import React from "react";
 import "./pagination.scss";
 
 const Pagination = ({ totalPages, handleClick }) => {
-  const pages = [...Array(totalPages).keys()].map(num => num+1);
+  const pages = [...Array(totalPages).keys()].map((num) => num + 1);
+
+  // TODO: Add previous & next buttons.
+
   return (
     <div className="pagination">
-      { pages.map(num => (
+      {pages.map((num) => (
+        <>
         <button
           key={num}
           onClick={() => handleClick(num)}
-          className="pagination__item"
-        >{num}</button>
-      )) }
+          className="button"
+          aria-label={"Go to page " + `${num}`}
+        >
+          {num}
+        </button>
+        </>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

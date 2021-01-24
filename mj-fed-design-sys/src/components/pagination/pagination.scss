@@ -2,21 +2,11 @@
 
 .pagination {
   display: flex;
-  justify-content: center;
+  margin-bottom: 15px;
 }
 
-.pagination__item {
-  background-color: $color-primary;
-  border-radius: 5px;
-  border: none;
-  color: $color-white;
-  font-size: 1.5rem;
-  margin: 15px;
-  padding: 15px 32px;
+.page-num {
+  @include font-montserrat-bold;
   text-align: center;
-  text-decoration: none;
-
-  &:hover {
-    background-color: darken($color-primary, 10%);
-  }
+  margin: 15px 15px 30px;
 }
