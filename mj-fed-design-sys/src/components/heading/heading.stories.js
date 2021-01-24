@@ -1,8 +1,7 @@
 import React from "react";
-import { Heading } from "./heading";
+import Heading from "./heading";
 import data from "./data.json";
 
-// This default export determines where you story goes in the story list
 export default {
   title: "Components/Heading",
   component: Heading,
