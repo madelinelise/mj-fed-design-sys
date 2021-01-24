@@ -4,9 +4,24 @@ body {
   color: $color-charcoal;
 }
 
+a {
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  color: $color-primary;
+}
+
 .layout {
   @include max-width;
-  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($bp-lg) {
+    padding: 60px;
+  }
+}
+
+.layout__utils {
+  align-self: center;
 }
 
 p {
