@@ -1,0 +1,7 @@
+@import "./../../style.scss";
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
