@@ -1,19 +1,25 @@
-.person-card {
-  border: 10px solid pink;
-  background-color: $color-lgray;
+@import "./../../style.scss";
+
+.user-card {
   display: flex;
-  padding: 10px;
+  padding: 12px;
 }
 
-.person-card__info {
-  padding: 30px;
+.user-card__name {
+  @include font-montserrat-bold;
 }
 
-// .person-card__name {
-//   @include font-size-heading3;
-// }
+.user-card__info {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
 
-.person-card__image {
+.user-card__info-item {
+  margin-bottom: 16px;
+}
+
+.user-card__image {
   img {
     border-radius: 50%;
   }

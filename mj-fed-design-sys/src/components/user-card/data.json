@@ -1,0 +1,17 @@
+{
+  "user": {
+    "name": {
+      "first": "Madeline",
+      "last": "Jensen"
+    },
+    "dob": {
+      "age": "29"
+    },
+    "email": "madelinelise@gmail.com",
+    "gender": "female",
+    "picture": {
+      "large": "https://via.placeholder.com/128x128.png"
+    },
+    "cell": "386-302-9853"
+  }
+}

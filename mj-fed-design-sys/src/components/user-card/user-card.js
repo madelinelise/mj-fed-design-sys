@@ -1,18 +1,25 @@
 import React from "react";
+import "./user-card.scss";
 
-const User = ({ user }) => {
+const UserCard = ({ user }) => {
+  console.log(user);
   return (
-
-    <div className="person-card">
-      <div className="person-card__image">
-        {/* <img src={`${image}`} alt="Madeline Jensen" /> */}
+    <div className="user-card">
+      <div className="user-card__image">
+        <img src={`${user.picture.large}`} alt="Madeline Jensen" />
       </div>
-      <div className="person-card__info">
-        <h3 className="person-card__name">{user.name.first} {user.name.last}</h3>
-        <div className="person-card__title">{user.title}</div>
+      <div className="user-card__info">
+        <h3 className="user-card__name user-card__info-item">
+          {user.name.first} {user.name.last}
+        </h3>
+        <span className="user-card__info-item">{user.email}</span>
+        <span className="user-card__info-item">{user.cell}</span>
+        <span className="user-card__info-item">
+          {user.dob.age} year old {user.gender}
+        </span>
       </div>
     </div>
   );
 };
 
-export default User;
+export default UserCard;
