@@ -1,5 +1,6 @@
 import React from "react";
 import "./heading.scss";
+import PropTypes from "prop-types";
 
 const Heading = (props) => {
   const { title, headingLevel } = props;
@@ -11,4 +12,9 @@ const Heading = (props) => {
   return <Title className="heading">{title}</Title>;
 };
 
-export default Heading
+Heading.propTypes = {
+  title: PropTypes.string,
+  headingLevel: PropTypes.string,
+};
+
+export default Heading;

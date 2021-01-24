@@ -3,6 +3,10 @@
 .pagination {
   display: flex;
   margin-bottom: 15px;
+
+  .button {
+    margin: 15px;
+  }
 }
 
 .page-num {

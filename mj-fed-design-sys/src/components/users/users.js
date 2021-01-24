@@ -17,9 +17,9 @@ const Users = ({ users, page }) => {
         className="button"
         tabindex="0"
         role="button"
-        id="toggle"
         aria-pressed="false"
         data={selectedUsers}
+        aria-label="Download a csv of users shown"
       >
         Download csv
       </CSVLink>

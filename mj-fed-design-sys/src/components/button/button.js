@@ -1,5 +1,6 @@
 import React from "react";
 import "./button.scss";
+import PropTypes from "prop-types";
 
 const Button = (button) => {
   let href;
@@ -28,6 +29,13 @@ const Button = (button) => {
       {button.children || button.title}
     </Element>
   );
+};
+
+Button.propTypes = {
+  button: {
+    url: PropTypes.string,
+    title: PropTypes.string,
+  },
 };
 
 export default Button;

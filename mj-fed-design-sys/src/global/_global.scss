@@ -11,12 +11,14 @@ a {
 }
 
 .layout {
-  @include max-width;
+
   display: flex;
   flex-direction: column;
+  padding: 15px;
 
   @include breakpoint($bp-lg) {
     padding: 60px;
+    @include max-width;
   }
 }
 
