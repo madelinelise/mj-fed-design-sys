@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Users from "./components/users/users";
-import { Heading } from "./components/heading/heading";
+import Heading from "./components/heading/heading";
 import Pagination from "./components/pagination/pagination";
 import axios from "axios";
 import { USER_PER_PAGE } from "./global/constants";
@@ -29,22 +29,19 @@ function App() {
     setPage(num);
   };
 
-  // console.log(users);
-
   return (
     <div className="layout">
       <Heading title="Our awesome team" headingLevel="h1" />
-      <Heading
-        title="This is an awesome subtitle."
-        headingLevel="h2"
-      />
-      <p>Page {page}</p>
+      <Heading title="This is an awesome subtitle." headingLevel="h2" />
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
+          <div className="layout__utils">
+            <Pagination totalPages={totalPages} handleClick={handleClick} />
+            <div className="page-num">Page {page}</div>
+          </div>
           <Users users={users} page={page} />
-          <Pagination totalPages={totalPages} handleClick={handleClick} />
         </>
       )}
     </div>
