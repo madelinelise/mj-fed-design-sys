@@ -1,0 +1,23 @@
+@import "./../../style.scss";
+
+.button {
+  background-color: $color-primary;
+  border-radius: 5px;
+  border: none;
+  color: $color-white;
+  font-size: 1.25rem;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
