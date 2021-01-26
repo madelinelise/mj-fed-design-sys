@@ -1,5 +1,5 @@
 import React from "react";
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 import { USER_PER_PAGE } from "../../global/constants";
 import UserCard from "../user-card/user-card";
 import "./users.scss";
