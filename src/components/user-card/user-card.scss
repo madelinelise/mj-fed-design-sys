@@ -6,10 +6,12 @@
   display: flex;
   margin-bottom: 25px;
   padding: 15px;
-  width: calc(100% - 15px);
-
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 
   @include breakpoint($bp-md) {
+    flex-direction: row;
     flex: 1 1 calc(50% - 43px);
     max-width: 50%;
 
@@ -27,6 +29,11 @@
   display: flex;
   flex-direction: column;
   padding-left: 30px;
+
+  @include breakpoint($bp-under-sm) {
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
 .user-card__info-item {
@@ -36,5 +43,8 @@
 .user-card__image {
   img {
     border-radius: 50%;
+  }
+  @include breakpoint($bp-under-sm) {
+    margin-bottom: 15px;
   }
 }

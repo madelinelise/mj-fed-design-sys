@@ -5,7 +5,11 @@
   margin-bottom: 15px;
 
   .button {
-    margin: 15px;
+    margin: 2px;
+
+    @include breakpoint($bp-sm) {
+      margin: 15px;
+    }
   }
 }
 
