@@ -6,7 +6,7 @@ const UserCard = ({ user }) => {
   return (
     <div className="user-card">
       <div className="user-card__image">
-        <img src={`${user.picture.large}`} alt="Madeline Jensen" />
+        <img src={`${user.picture.large}`} alt={`${user.name.first}`} />
       </div>
       <div className="user-card__info">
         {user.name.first && user.name.last && (
@@ -45,11 +45,11 @@ UserCard.propTypes = {
   user: {
     name: {
       first: PropTypes.string,
-      last: PropTypes.string
+      last: PropTypes.string,
     },
     email: PropTypes.string,
-    cell: PropTypes.string
-  }
+    cell: PropTypes.string,
+  },
 };
 
 export default UserCard;
