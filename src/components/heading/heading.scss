@@ -4,3 +4,8 @@
   margin-bottom: 30px;
   color: $color-charcoal;
 }
+
+.section {
+  @include font-montserrat-bold;
+  margin-top: 60px;
+}

@@ -1,0 +1,50 @@
+@import "./../../style.scss";
+
+.color-swatch {
+  display: inline-block;
+  border: 2px solid $color-lgray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.color-swatch__color {
+  width: 150px;
+  height: 100px;
+}
+
+.color-swatch__color--primary {
+  background-color: $color-primary;
+}
+
+.color-swatch__color--bg {
+  background-color: $color-bg;
+}
+
+.color-swatch__color--white {
+  background-color: $color-white;
+}
+
+.color-swatch__color--charcoal {
+  background-color: $color-charcoal;
+}
+
+.color-swatch__color--lgray {
+  background-color: $color-lgray;
+}
+
+.color-swatch__color-info {
+  padding: 15px;
+  background-color: $color-white;
+}
+
+.color-swatch__color-name {
+  margin-bottom: 2px;
+  font-weight: $font-weight-bold;
+}
+
+hr {
+  height: 1px;
+  background-color: #bfbfbf;
+  border: none;
+  margin: 20px 0 30px 0;
+}

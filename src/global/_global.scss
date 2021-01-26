@@ -1,6 +1,6 @@
 body {
   @include font-open-sans;
-  background-color: $color-secondary;
+  background-color: $color-bg;
   color: $color-charcoal;
 }
 
@@ -31,9 +31,9 @@ p {
   margin-bottom: 60px;
 }
 
-h2, h3, h4, h5, h6 {
-  @include font-open-sans;
-}
+// h2, h3, h4, h5, h6 {
+//   @include font-open-sans;
+// }
 
 h1 {
   @include font-montserrat-bold;
@@ -45,6 +45,7 @@ h1 {
 }
 
 h2 {
+  @include font-montserrat-bold;
   font-size: 1.75rem;
 
   @include breakpoint($bp-md) {

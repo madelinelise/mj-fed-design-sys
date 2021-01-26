@@ -1,0 +1,36 @@
+@import "./../../style.scss";
+
+.font {
+  background-color: $color-white;
+  border-radius: 5px;
+  border: 2px solid $color-lgray;
+  display: inline-block;
+  margin: 0 30px 30px 0;
+  padding: 15px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.font-letters {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.font--bold {
+  font-weight: bold;
+}
+
+.font-heading--regular {
+  @include font-montserrat;
+  font-weight: normal;
+}
+
+.font-heading {
+  &.font--bold {
+    @include font-montserrat-bold;
+  }
+}
+
+.heading-block {
+  margin-bottom: 30px;
+}
